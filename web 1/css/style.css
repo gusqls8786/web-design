@@ -1,0 +1,347 @@
+/* wrap */
+#wrap
+{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+/* header */
+#header
+{
+
+}
+
+#header h1
+{
+    float: left;
+    width: 120px;
+}
+
+#header h1 a img
+{
+    width: 100%;
+}
+
+#header .nav
+{
+    float: right;
+    margin-top: 20px;
+   
+}
+
+#header .nav ul
+{
+
+}
+
+#header .nav ul li
+{
+    position: relative;
+    float: left;
+    width: 120px;
+    text-align: center;
+}
+
+#header .nav ul li a
+{
+    background: #ccc;
+    display: block;
+    padding: 20px 15px;
+    transition-duration: 0.3s;
+    /* a태그는 in-line 요소 */
+    /* 
+    in-line 요소란?
+     글자, 이미지. href속성등을 뜻함
+     width, height 속성 적용이 불가하기때문에 margin, padding을 이용한다.
+     인라인 요소도 style속성의 display: block;과 display: inline-block;를
+     이용해 block요소의 디스플레이 특성을 가질 수 있다.
+    */
+}
+
+#header .nav ul li a:hover
+{
+    background: #ddd;
+}
+
+
+#header .nav ul li .submenu
+{
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 10;
+    /* position이 있어야 실행가능 */
+}
+
+/* banner */
+
+#banner
+{
+    height: 378px;
+    overflow: hidden;
+}
+
+#banner .slidelist
+{
+    position: relative;
+}
+
+#banner .slidelist .slideImg
+{
+    position: relative;
+}
+
+#banner .slidelist .slideImg h2
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.5);
+    padding: 10px 30px;
+    border-radius: 20px;
+    color: white;
+}
+
+#banner .slidelist .slideImg img
+{
+    width: 100%;
+    vertical-align: top;
+    /* img 태그 특징
+     1.인라인요소 -> 예측하지 못하는 공간을 가지고있음
+      해결방법
+       1. display: block;
+       2. vertical-align:top;*/   
+}
+
+/* content1 입니당*/
+#content1
+{
+    margin-top: 15px;
+    /* width: 1000px;
+    height: 218px; */
+}
+
+#content1 .notice
+{
+    float: left;
+    width: 49%;
+    height: 218px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    padding: 30px;
+    position: relative;
+}
+
+#content1 .ad
+{
+    float: right;
+    background: lightcoral;
+    width: 49%;
+    height: 218px;
+}
+
+#content1 .notice ul
+{
+
+}
+
+#content1 .notice ul li
+{
+    float: left;
+    margin-right: 10px;
+}
+
+#content1 .notice ul li a
+{
+    font-size: 24px;
+    color: #999;
+    font-weight: bold;
+}
+
+#content1 .notice ul li.active a
+{
+    color: black;
+}
+
+#content1 .notice ul li ul
+{
+    position: absolute;
+    left: 30px;
+    top: 75px;
+}
+
+#content1 .notice ul li ul li
+{
+    
+}
+
+#content1 .notice ul li ul a
+{
+    font-size: 16px;
+    float: left;
+    width: 68%;
+    /* 말줄임말 start */
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    /* 말줄임말 end */
+    font-weight: normal;  
+    /* 폰트 두깨 초기화 */
+}
+
+#content1 .notice ul li ul a span
+{
+    float: right;
+}
+
+#content1 .ad a img
+{
+    width: 100%;
+}
+
+/* 팝업창 입니당 */
+.layer-bg
+{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.8);
+}
+
+.layer-bg .layer
+{
+    width: 500px;
+    height: 500px;
+    background: white;
+    position: absolute;
+    /* 
+    자식이 position: absolute; 일때 부모는 자동적으로
+    position: static; 기본값
+    position: relative, absolute, fixed;라면 기준이 될수 있다
+    position: static; 일때는 기준이 될수없다 */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.layer-bg .layer h2
+{
+    font-size: 35px;
+}
+
+.layer-bg .layer .close
+{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#content2
+{
+
+}
+
+#content2 h2
+{
+
+}
+
+#content2 ul
+{
+
+}
+
+#content2 ul li
+{
+    float: left;
+    width: 24.25%;
+    margin-right: 1%;
+}
+
+#content2 ul li:last-child
+{
+    margin-right: 0;
+}
+
+#content2 ul li div
+{
+    overflow: hidden;
+}
+
+#content2 ul li div img
+{
+    width: 100%;
+    transition: 0.3s;
+}
+
+#content2 ul li div:hover img
+{
+    transform: scale(1.2);
+}
+
+#content2 ul li span
+{
+
+}
+
+#footer
+{
+    padding: 30px 0;
+    margin-top: 30px;
+    border-top: 1px solid #ccc;
+}
+
+#footer address
+{
+    /* address 태그는 태생적으로 italic */
+    font-style: normal;
+}
+
+#footer address ul
+{
+    width: 527px;
+}
+
+#footer address ul li
+{
+    /* inline 요소는 공간을 인식하지 못함
+    ex) padding, margin의 상하값이 적용이 안됨 */
+
+    /* display: inline-block은 
+    인라인요소나 블럭요소처럼 넓이를 인식함 */
+    display: inline;
+    padding: 0 15px 0 10px;
+}
+
+#footer address ul li:nth-child(1)
+{
+    padding: 0;
+}
+
+#footer address ul li:nth-child(3)
+{
+    padding: 0;
+}
+
+#footer address ul li p
+{
+    
+}
+
+#footer address p
+{
+    text-transform: uppercase;
+    /*
+    capitalize = 첫번째 단어만 대문자
+    uppercase = all 대문자
+    lowercase = all 소문자 */
+    padding-top: 30px;
+}
